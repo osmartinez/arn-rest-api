@@ -15,14 +15,9 @@ var OrdenFabricacionOperacion = new Schema({
   operacionesTallas: [{ type: OrdenFabricacionOperacionTalla }],
   Seccion: { type: Schema.Types.ObjectId, required: true, ref: "Seccion" },
   Utillaje: { type: Schema.Types.ObjectId, required: true, ref: "Utillaje" },
-  OrdenFabricacion: {
-    type: Schema.Types.ObjectId,
-    required: true,
-    ref: "OrdenFabricacion",
-  },
+  
   OrdenFabricacionOperacionConfiguracion: {
     type: Schema.Types.ObjectId,
-    required: true,
     ref: "OrdenFabricacionOperacionConfiguracion",
   },
 });

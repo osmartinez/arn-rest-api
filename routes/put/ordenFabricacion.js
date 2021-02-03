@@ -1,10 +1,10 @@
 const OrdenFabricacion = require('../../models/OrdenFabricacion')
 
 module.exports = function (router) {
-    router.post('/api/ordenFabricacion', (req, res) => {
+    router.put('/api/ordenFabricacion', (req, res) => {
         const orden = new OrdenFabricacion(req.body)
         orden.save()
-        res.body = { msg: 'hola' }
+        res.body = orden
         res.send()
     })
 }

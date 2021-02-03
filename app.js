@@ -1,8 +1,12 @@
 const service = require('restana')()
 const mongoose = require('mongoose')
 const bodyParser = require('body-parser')
+const queryParser = require('connect-query')
 
 service.use(bodyParser.json())
+service.use(queryParser())
+mongoose.pluralize(null);
+
 require('./routes')(service)
 
 connect()
