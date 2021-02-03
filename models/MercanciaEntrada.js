@@ -1,0 +1,2 @@
+
+var mongoose = require('mongoose');var Schema = mongoose.Schema;var MercanciaEntrada = new Schema({fechaRecepcion: {type: Date},albaranProveedor: {type: String},proveedor: {type: String},proveedorERP: {type: String},observaciones: {type: String},entradaTransformacion: {type: Boolean},tipoEntrada: {type: String},totalCompras: {type: Number},numeroPaquetes: {type: Number}}); 

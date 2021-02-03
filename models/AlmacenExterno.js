@@ -1,0 +1,2 @@
+
+var mongoose = require('mongoose');var Schema = mongoose.Schema;var AlmacenExterno = new Schema({nombre: {type: String, required: true},direccion: {type: String},poblacion: {type: String},telefono: {type: String},email: {type: String}}); 

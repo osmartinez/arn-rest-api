@@ -1,0 +1,2 @@
+
+var mongoose = require('mongoose');var Schema = mongoose.Schema;var MercanciaSalida = new Schema({cliente: {type: String},direccion: {type: String},cp: {type: String},localidad: {type: String},pais: {type: String},fecha: {type: Date},personaEmisora: {type: String},fechaCreacion: {type: Date},observaciones: {type: String},numeroAlbaran: {type: String}}); 

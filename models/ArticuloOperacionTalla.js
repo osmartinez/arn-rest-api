@@ -1,0 +1,2 @@
+
+var mongoose = require('mongoose');var Schema = mongoose.Schema;var ArticuloOperacionTalla = new Schema({posicion: {type: String},tallaArticulo: {type: String},productividadCalculada: {type: Number},productividadTallaUtillaje: {type: Number},ArticuloOperacion: {type: Schema.Types.ObjectId, required: true, ref: 'ArticuloOperacion'}}); 

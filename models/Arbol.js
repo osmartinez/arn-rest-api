@@ -1,0 +1,2 @@
+
+var mongoose = require('mongoose');var Schema = mongoose.Schema;var Arbol = new Schema({prefijoId: {type: String},codArbol: {type: Number},padre: {type: String},text: {type: String},imageIndex: {type: Number},selectedImageIndex: {type: Number},tag: {type: String}}); 

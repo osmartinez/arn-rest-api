@@ -1,0 +1,2 @@
+
+var mongoose = require('mongoose');var Schema = mongoose.Schema;var StockArticuloTalla = new Schema({talla: {type: String, required: true},cantidad: {type: String, required: true},fechaUltimoMovimiento: {type: Date, required: true},StockArticulo: {type: Schema.Types.ObjectId, required: true, ref: 'StockArticulo'}}); 

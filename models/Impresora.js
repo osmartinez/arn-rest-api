@@ -1,0 +1,2 @@
+
+var mongoose = require('mongoose');var Schema = mongoose.Schema;var Impresora = new Schema({nombre: {type: String, required: true},ip: {type: String},com: {type: String},dpi: {type: Number},baudRate: {type: Number},dataBits: {type: Number},parity: {type: Number},stopBits: {type: Number},handshake: {type: Number},prioridadIp: {type: Boolean}}); 

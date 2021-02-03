@@ -1,0 +1,2 @@
+
+var mongoose = require('mongoose');var Schema = mongoose.Schema;var OrdenFabricacionPaqueteExtra = new Schema({fechaCreacion: {type: String, required: true},cantidad: {type: String, required: true},tipo: {type: String, required: true},Operario: {type: Schema.Types.ObjectId, required: true, ref: 'Operario'},Maquina: {type: Schema.Types.ObjectId, required: true, ref: 'Maquina'},OrdenFabricacionOperacionTallaCantidad: {type: Schema.Types.ObjectId, required: true, ref: 'OrdenFabricacionOperacionTallaCantidad'}}); 

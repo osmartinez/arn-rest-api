@@ -1,0 +1,2 @@
+
+var mongoose = require('mongoose');var Schema = mongoose.Schema;var TallerPaqueteRecepcion = new Schema({talla: {type: String},cantidad: {type: Number},fechaRecepcion: {type: Date},OrdenFabricacionOperacion: {type: Schema.Types.ObjectId, required: true, ref: 'OrdenFabricacionOperacion'},Taller: {type: Schema.Types.ObjectId, required: true, ref: 'Taller'}}); 

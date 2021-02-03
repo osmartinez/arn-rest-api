@@ -1,0 +1,2 @@
+
+var mongoose = require('mongoose');var Schema = mongoose.Schema;var Operario = new Schema({codigo: {type: String, required: true},nombre: {type: String, required: true},apellidos: {type: String},esResponsable: {type: Boolean, required: true},codigoEtiqueta: {type: String},clave: {type: String}}); 

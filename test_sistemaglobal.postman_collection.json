@@ -1,0 +1,67 @@
+{
+	"info": {
+		"_postman_id": "7c44b685-195f-44f3-997e-121009420cfc",
+		"name": "test_sistemaglobal",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "post articulo",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"codigo\": \"R123123123\",\r\n  \"descripcion\": \"primer articulo\",\r\n  \"unidadMedida\": \"PAR\",\r\n  \"precio\": 1.2,\r\n  \"bloqueado\": false,\r\n  \"codigoCliente\": \"0001\",\r\n  \"nombreCliente\": \"OSCAR\",\r\n  \"modelo\": \"modelo A\",\r\n  \"observaciones\": \"observaciones test\",\r\n  \"certificado\": true,\r\n  \"importadoERP\": false,\r\n  \"codFamilia\": \"MICROPERFORADO\",\r\n  \"codSubFamilia\": \"MICROTEX\",\r\n  \"grupoTallaActual\": \"0\",\r\n  \"rutaImagen\": \"\",\r\n  \"ciclo\": 180,\r\n  \"tallas\": [\r\n    {\r\n      \"talla\": \"35\",\r\n      \"posicion\": 1\r\n    }\r\n  ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/articulo",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"articulo"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "post orden",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"codigo\": \"OF00001\",\r\n   \"fechaEntrega\": \"01/02/2021\",\r\n   \"prioridad\": 1,\r\n   \"acabada\": false,\r\n   \"codigoArticulo\": \"R123123123\",\r\n   \"idPedidoERP\": 1,\r\n   \"lineasPosicionERP\": 5,\r\n   \"fechaEntregaERP\": \"15/02/2021\",\r\n   \"observaciones\": \"alguna observación\",\r\n   \"fechaCreacion\": \"01/02/2021\",\r\n   \"revision\": \"1\",\r\n   \"fechaFinalizado\": null,\r\n   \"tipo\": \"pedido\",\r\n   \"agrupacion\": 0,\r\n   \"fechaPedido\": \"15/02/2021\",\r\n   \"nombreCliente\": \"FA ATLAS\",\r\n   \"domicilioEnvio\": \"Germany\",\r\n   \"lineaPedidoERP\": 5,\r\n   \"descripcionArticuloERP\": \"ARTICULO DE PRUEBA\",\r\n   \"suModeloExpedicionERP\": \"su modelo de prueba\",\r\n   \"observacionesExpedicionERP\": \"sus observaciones de prueba\",\r\n   \"razonSocialERP\": \"su razon social de prueba\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/ordenFabricacion",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"ordenFabricacion"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

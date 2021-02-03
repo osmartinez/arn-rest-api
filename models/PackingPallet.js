@@ -1,0 +1,2 @@
+
+var mongoose = require('mongoose');var Schema = mongoose.Schema;var PackingPallet = new Schema({numPallet: {type: Number},lotePalet: {type: String},producto: {type: String},almacen: {type: String},lotePlantillas1: {type: String},lotePlantillas2: {type: String},lotePlantillas3: {type: String},fechaHora: {type: Date},cantidad: {type: Number},gs1: {type: String},sscc: {type: String},Packinglist: {type: Schema.Types.ObjectId, required: true, ref: 'Packinglist'}}); 

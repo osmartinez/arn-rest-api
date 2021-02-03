@@ -1,0 +1,2 @@
+
+var mongoose = require('mongoose');var Schema = mongoose.Schema;var Puesto = new Schema({nombre: {type: String},descripcion: {type: String},observaciones: {type: String},codigoEtiqueta: {type: String},esManual: {type: Boolean},ip: {type: String},uiTopMargin: {type: Number},uiLeftMargin: {type: Number},Ubicacion: {type: Schema.Types.ObjectId, ref: 'Ubicacion'}}); 
