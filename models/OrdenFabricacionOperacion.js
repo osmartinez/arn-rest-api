@@ -1,6 +1,5 @@
 var mongoose = require("mongoose");
 var Schema = mongoose.Schema;
-var OrdenFabricacionOperacionTalla = require('./OrdenFabricacionOperacionTalla').schema
 
 var OrdenFabricacionOperacion = new Schema({
   descripcion: { type: String, required: true },
@@ -12,7 +11,7 @@ var OrdenFabricacionOperacion = new Schema({
   observaciones: { type: String },
   codConexion: { type: String, required: true },
   tipoProceso: { type: Number },
-  operacionesTallas: [{ type: OrdenFabricacionOperacionTalla }],
+  tareas: [{ type: Schema.Types.ObjectId, ref: "OrdenFabricacionOperacionTarea" }],
   Seccion: { type: Schema.Types.ObjectId, required: true, ref: "Seccion" },
   Utillaje: { type: Schema.Types.ObjectId, required: true, ref: "Utillaje" },
   

@@ -1,13 +1,9 @@
 var mongoose = require("mongoose");
 var Schema = mongoose.Schema;
 var OrdenFabricacionPaquete = new Schema({
-  fechaCreacion: { type: Date, required: true },
+  fechaCreacion: { type: Date, required: true,default: Date.now() },
   cantidad: { type: Number, required: true },
   tipo: { type: String },
-  OrdenFabricacionOperacionTallaCantidad: {
-    type: Schema.Types.ObjectId,
-    ref: "OrdenFabricacionOperacionTallaCantidad",
-  },
   Operario: { type: Schema.Types.ObjectId, ref: "Operario" },
   Maquina: { type: Schema.Types.ObjectId, ref: "Maquina" },
 });

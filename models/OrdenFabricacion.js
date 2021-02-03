@@ -1,6 +1,8 @@
 var mongoose = require("mongoose");
 var Schema = mongoose.Schema;
 var OrdenFabricacionOperacion = require("./OrdenFabricacionOperacion").schema;
+var OrdenFabricacionPaquete = require("./OrdenFabricacionPaquete").schema;
+
 var OrdenFabricacion = new Schema({
   codigo: { type: String, required: true },
   fechaEntrega: { type: Date },
