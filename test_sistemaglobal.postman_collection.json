@@ -6,62 +6,246 @@
 	},
 	"item": [
 		{
-			"name": "post articulo",
-			"request": {
-				"method": "POST",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": "{\r\n  \"codigo\": \"R123123123\",\r\n  \"descripcion\": \"primer articulo\",\r\n  \"unidadMedida\": \"PAR\",\r\n  \"precio\": 1.2,\r\n  \"bloqueado\": false,\r\n  \"codigoCliente\": \"0001\",\r\n  \"nombreCliente\": \"OSCAR\",\r\n  \"modelo\": \"modelo A\",\r\n  \"observaciones\": \"observaciones test\",\r\n  \"certificado\": true,\r\n  \"importadoERP\": false,\r\n  \"codFamilia\": \"MICROPERFORADO\",\r\n  \"codSubFamilia\": \"MICROTEX\",\r\n  \"grupoTallaActual\": \"0\",\r\n  \"rutaImagen\": \"\",\r\n  \"ciclo\": 180,\r\n  \"tallas\": [\r\n    {\r\n      \"talla\": \"35\",\r\n      \"posicion\": 1\r\n    }\r\n  ]\r\n}",
-					"options": {
-						"raw": {
-							"language": "json"
+			"name": "put",
+			"item": [
+				{
+					"name": "put articulo",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"codigo\": \"R123123123\",\r\n  \"descripcion\": \"primer articulo\",\r\n  \"unidadMedida\": \"PAR\",\r\n  \"precio\": 1.2,\r\n  \"bloqueado\": false,\r\n  \"codigoCliente\": \"0001\",\r\n  \"nombreCliente\": \"OSCAR\",\r\n  \"modelo\": \"modelo A\",\r\n  \"observaciones\": \"observaciones test\",\r\n  \"certificado\": true,\r\n  \"importadoERP\": false,\r\n  \"codFamilia\": \"MICROPERFORADO\",\r\n  \"codSubFamilia\": \"MICROTEX\",\r\n  \"grupoTallaActual\": \"0\",\r\n  \"rutaImagen\": \"\",\r\n  \"ciclo\": 180,\r\n  \"tallas\": [\r\n    {\r\n      \"talla\": \"35\",\r\n      \"posicion\": 1\r\n    }\r\n  ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/articulo",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"articulo"
+							]
 						}
-					}
+					},
+					"response": []
 				},
-				"url": {
-					"raw": "http://localhost:3000/api/articulo",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "3000",
-					"path": [
-						"api",
-						"articulo"
-					]
+				{
+					"name": "put orden",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n   \"codigo\": \"OF00001\",\r\n   \"fechaEntrega\": \"2012-04-23T18:25:43.511Z\",\r\n   \"prioridad\": 1,\r\n   \"acabada\": false,\r\n   \"codigoArticulo\": \"R123123123\",\r\n   \"idPedidoERP\": 1,\r\n   \"lineasPosicionERP\": 5,\r\n   \"fechaEntregaERP\": \"2012-04-23T18:25:43.511Z\",\r\n   \"observaciones\": \"alguna observación\",\r\n   \"fechaCreacion\": \"2012-04-23T18:25:43.511Z\",\r\n   \"revision\": \"1\",\r\n   \"fechaFinalizado\": null,\r\n   \"tipo\": \"pedido\",\r\n   \"agrupacion\": 0,\r\n   \"fechaPedido\": \"2012-04-23T18:25:43.511Z\",\r\n   \"nombreCliente\": \"FA ATLAS\",\r\n   \"domicilioEnvio\": \"Germany\",\r\n   \"lineaPedidoERP\": 5,\r\n   \"descripcionArticuloERP\": \"ARTICULO DE PRUEBA\",\r\n   \"suModeloExpedicionERP\": \"su modelo de prueba\",\r\n   \"observacionesExpedicionERP\": \"sus observaciones de prueba\",\r\n   \"razonSocialERP\": \"su razon social de prueba\",\r\n   \"Articulo\": \"601b1578b837990fb0d4f17c\",\r\n   \"operaciones\":[\r\n       {\r\n           \"descripcion\": \"CORTAR CUADROS\",\r\n           \"codSeccion\": \"080\",\r\n           \"codUtillaje\": \"TM00200\",\r\n           \"numeroOperacion\": \"1\",\r\n           \"numeroOperacionAnterior\": null,\r\n           \"numeroOperacionSiguiente\": \"2\",\r\n           \"observaciones\": \"OBSERVACIONES\",\r\n           \"codConexion\": \"A\",\r\n           \"tipoProceso\": 1,\r\n           \"Seccion\": \"601b16dd51084924ecea4265\",\r\n           \"Utillaje\": \"601b1a1cf503cd2bc4f9e1b2\",\r\n           \"tareas\":[\r\n               {\r\n                   \"numeroOperacion\": 1,\r\n                   \"tallaUtillaje\": 41,\r\n                   \"numeroOperacionAnterior\":null,\r\n                   \"numeroOperacionSiguiente\":null,\r\n                   \"tallas\":[\"35\"],\r\n                   \"productividadCalculada\":1,\r\n                   \"productividadTallaUtillaje\":1,\r\n\r\n                   \"cantidadFabricar\": 1000,\r\n                   \"cantidadSaldos\": 20,\r\n                   \"cantidadDefectuosa\":0,\r\n                   \"cantidadProducida\":0,\r\n                   \"finalizada\": false,\r\n                   \"estado\": \"lista\",\r\n                   \"estadoAnterior\": null,\r\n\r\n                   \"UtillajeTalla\":\"601b1c042f8a0c2a5c93cac9\"\r\n               }\r\n           ]\r\n\r\n       }\r\n   ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/ordenFabricacion",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"ordenFabricacion"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "put seccion",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": null
+					},
+					"response": []
+				},
+				{
+					"name": "put utillaje",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"codigo\":\"TM0001\",\r\n    \"descripcion\":\"utillaje para corte\",\r\n    \"observaciones\":\"sin observaciones\",\r\n    \"modelo\": \"modelo a\",\r\n    \"cliente\": \"haix\",\r\n    \"estado\": \"ok\",\r\n    \"habilitado\":true\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/utillaje",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"utillaje"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "put utillajetalla",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n            \"talla\":\"41\",\r\n            \"productividad\":1,\r\n            \"dimensionX\":0,\r\n            \"dimensionY\":0,\r\n            \"posicion\": 0,\r\n            \"totalComponentes\": 1,\r\n            \"impresionMarcaje1\":null,\r\n            \"impresionMarcaje2\":null,\r\n            \"impresionMarcaje3\":null,\r\n            \"ficheroImpresionMarcaje\": null,\r\n            \"Utillaje\": \"601b1a1cf503cd2bc4f9e1b2\"\r\n            \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/utillajeTalla",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"utillajeTalla"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "put utillajetallacoleccion",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"codigoEtiqueta\": null,\r\n    \"activo\":true,\r\n    \"estado\": \"ok\",\r\n    \"componente\": null,\r\n    \"usuarioCreacion\":\"Oscar\",\r\n    \"codigoContenedor\":null,\r\n    \"rendimiento\":0,\r\n    \"Contenedor\": \"____________\",\r\n    \"UtillajeTalla\": \"______________\"\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/utillajeTallaColeccion",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"utillajeTallaColeccion"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "put ordenPaquete",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"cantidad\": 5,\r\n    \"tipo\": \"plc\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/ordenFabricacionPaquete?idOrdenFabricacionOperacionTarea=601b36f1b7303731e8c8c094",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"ordenFabricacionPaquete"
+							],
+							"query": [
+								{
+									"key": "idOrdenFabricacionOperacionTarea",
+									"value": "601b36f1b7303731e8c8c094"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "put tarea",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": null
+					},
+					"response": []
 				}
-			},
-			"response": []
+			]
 		},
 		{
-			"name": "post orden",
-			"request": {
-				"method": "POST",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": "{\r\n   \"codigo\": \"OF00001\",\r\n   \"fechaEntrega\": \"01/02/2021\",\r\n   \"prioridad\": 1,\r\n   \"acabada\": false,\r\n   \"codigoArticulo\": \"R123123123\",\r\n   \"idPedidoERP\": 1,\r\n   \"lineasPosicionERP\": 5,\r\n   \"fechaEntregaERP\": \"15/02/2021\",\r\n   \"observaciones\": \"alguna observación\",\r\n   \"fechaCreacion\": \"01/02/2021\",\r\n   \"revision\": \"1\",\r\n   \"fechaFinalizado\": null,\r\n   \"tipo\": \"pedido\",\r\n   \"agrupacion\": 0,\r\n   \"fechaPedido\": \"15/02/2021\",\r\n   \"nombreCliente\": \"FA ATLAS\",\r\n   \"domicilioEnvio\": \"Germany\",\r\n   \"lineaPedidoERP\": 5,\r\n   \"descripcionArticuloERP\": \"ARTICULO DE PRUEBA\",\r\n   \"suModeloExpedicionERP\": \"su modelo de prueba\",\r\n   \"observacionesExpedicionERP\": \"sus observaciones de prueba\",\r\n   \"razonSocialERP\": \"su razon social de prueba\"\r\n}",
-					"options": {
-						"raw": {
-							"language": "json"
+			"name": "get",
+			"item": [
+				{
+					"name": "get all orden",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/ordenFabricacion?incluirArticulo=true&incluirPaquetes=true&incluirTareas=true",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"ordenFabricacion"
+							],
+							"query": [
+								{
+									"key": "incluirArticulo",
+									"value": "true"
+								},
+								{
+									"key": "incluirPaquetes",
+									"value": "true"
+								},
+								{
+									"key": "incluirTareas",
+									"value": "true"
+								}
+							]
 						}
-					}
-				},
-				"url": {
-					"raw": "http://localhost:3000/api/ordenFabricacion",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "3000",
-					"path": [
-						"api",
-						"ordenFabricacion"
-					]
+					},
+					"response": []
 				}
-			},
-			"response": []
+			]
 		}
 	]
 }
